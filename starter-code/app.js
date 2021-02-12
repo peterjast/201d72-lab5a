@@ -10,10 +10,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
     // one line solution
-    return [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + intSum + '.'];
+    return [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
     
     // two line solution
-    // let sumArray = [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + intSum + '.'];
+    // let sumArray = [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
     // return sumArray;
 
     // more decomposition
