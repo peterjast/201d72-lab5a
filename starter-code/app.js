@@ -75,7 +75,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
     let arraySumAB = sum(a,b);
     let sumAB = arraySumAB[0];
-    let sumArrayABC = sum(sumAB, c)
+    let sumArrayABC = sum(sumAB, c);
     let sumABC = sumArrayABC[0];
     let arrayProductAB = multiply(a,b);
     let productAB = arrayProductAB[0];
@@ -106,7 +106,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    
 }
 
 // Here is the test for sumArray(); uncomment it to run it
