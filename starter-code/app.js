@@ -9,11 +9,30 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
+    // one line solution
+    return [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + intSum + '.'];
+    
+    // two line solution
+    // let sumArray = [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + intSum + '.'];
+    // return sumArray;
 
+    // more decomposition
+    // let sumTotal = a + b;
+    // let sumString = 'The sum of ' + a + ' and ' + b + ' is ' + sumTotal + '.';
+    // let sumArray = [sumTotal, sumString];
+    // return sumArray;
+
+    // more decomposition - declaring sumArray with array constructor
+    // let sumTotal = a + b;
+    // let sumString = 'The sum of ' + a + ' and ' + b + ' is ' + sumTotal + '.';
+    // let sumArray = new Array(2);
+    // sumArray[0] = sumTotal;
+    // sumArray[1] = sumString;
+    // return sumArray;   
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
