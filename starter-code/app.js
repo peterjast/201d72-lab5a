@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
     // one line solution
-    return [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
+    //return [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
     
     // two line solution
     // let sumArray = [a + b, 'The sum of ' + a + ' and ' + b + ' is ' + (a + b) + '.'];
@@ -23,12 +23,12 @@ function sum(a, b) { //eslint-disable-line
     // return sumArray;
 
     // more decomposition - declaring sumArray with array constructor
-    // let sumTotal = a + b;
-    // let sumString = 'The sum of ' + a + ' and ' + b + ' is ' + sumTotal + '.';
-    // let sumArray = new Array(2);
-    // sumArray[0] = sumTotal;
-    // sumArray[1] = sumString;
-    // return sumArray;   
+    let total = a + b;
+    let sumString = 'The sum of ' + a + ' and ' + b + ' is ' + total + '.';
+    let sumArray = new Array(2);
+    sumArray[0] = total;
+    sumArray[1] = sumString;
+    return sumArray;   
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -45,9 +45,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
-    return [a * b, 'The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.'];
+function multiply(a,b){
+    let product = a * b;
+    let productString = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+    let productArray = new Array(2);
+    productArray[0] = product;
+    productArray[1] = productString;
+    return productArray;   
 }
+
 
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
@@ -67,11 +73,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    let arraySumAB = sum(a,b);
+    let sumAB = arraySumAB[0];
+    let sumArrayABC = sum(sumAB, c)
+    let sumABC = sumArrayABC[0];
+    let arrayProductAB = multiply(a,b);
+    let productAB = arrayProductAB[0];
+    let productArrayABC = multiply(productAB, c)
+    let productABC = productArrayABC[0];
+    let sumStringABC = a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC + '.';
+    let productStringABC = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productABC + '.';
+    let sumAndMultiplyArray = [sumABC, productABC, sumStringABC, productStringABC];
+    return sumAndMultiplyArray;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
